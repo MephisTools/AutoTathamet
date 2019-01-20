@@ -1,6 +1,6 @@
 {
   "name": "PathOfBot",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Create Diablo2 bots with a powerful, stable, and high level JavaScript API.",
   "main": "index.js",
   "scripts": {
