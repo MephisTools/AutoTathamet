@@ -1,5 +1,5 @@
 {
-  "name": "PathOfBot",
+  "name": "pathofbot",
   "version": "1.0.0",
   "description": "Create Diablo2 bots with a powerful, stable, and high level JavaScript API.",
   "main": "index.js",
