@@ -18,7 +18,7 @@ Create Diablo2 bots with a powerful, stable, and high level JavaScript API.
 ## Usage
 
 ```js
-const { createBot } = require('.')
+const { createBot } = require('pathofbot')
 
 async function start () {
   const bot = await createBot({
