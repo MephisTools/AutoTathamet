@@ -1,6 +1,7 @@
 # PathOfBot
 [![NPM version](https://img.shields.io/npm/v/pathofbot.svg)](http://npmjs.com/package/pathofbot)
-[![Build Status](https://img.shields.io/circleci/project/MephisTools/PathOfBot/master.svg)](https://circleci.com/gh/MephisTools/PathOfBot)
+[![Build Status](https://img.shields.io/circleci/project/MephisTools/PathOfBot/master.svg)](https://circleci.com/gh/MephisTools/PathOfBot) 
+[![Discord Chat](https://img.shields.io/badge/discord-here-blue.svg)](https://discord.gg/FY4hG8)  
 
 Create Diablo2 bots with a powerful, stable, and high level JavaScript API.
 
