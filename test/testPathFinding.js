@@ -1,15 +1,5 @@
 const Map = require('../lib/map')
-const findPath = require('../lib/pathFinding')
-
-function emptyMap () {
-  const map = new Map()
-
-  const path = findPath({ x: 20, y: 20 }, { x: 980, y: 980 }, map)
-
-  console.log('empty', JSON.stringify(path))
-}
-
-emptyMap()
+const { findPath, walkNeighborsCandidates, tpNeighborsCandidates } = require('../lib/pathFinding')
 
 function addMaze (map, proba) {
   for (let x = 20; x < 980; x += 20) {
@@ -32,67 +22,40 @@ function addMapBorder (map) {
   }
 }
 
-function easyMaze () {
+function emptyMap (neighborCandidates) {
+  const map = new Map()
+
+  const path2 = findPath({ x: 20, y: 20 }, { x: 980, y: 980 }, map, neighborCandidates)
+
+  console.log('empty', JSON.stringify(path2))
+}
+
+function withMaze (neighborCandidates, name, proba) {
   const map = new Map()
   addMapBorder(map)
   // full map
-  addMaze(map, 0.1)
+  addMaze(map, proba)
 
-  const path2 = findPath({ x: 20, y: 20 }, { x: 980, y: 980 }, map)
+  const path2 = findPath({ x: 20, y: 20 }, { x: 980, y: 980 }, map, neighborCandidates)
 
-  console.log('easy', JSON.stringify(path2))
+  console.log(name, JSON.stringify(path2))
 }
 
-easyMaze()
+console.log('walk :')
+emptyMap(walkNeighborsCandidates)
+withMaze(walkNeighborsCandidates, 'easy', 0.1)
+withMaze(walkNeighborsCandidates, 'medium', 0.3)
+withMaze(walkNeighborsCandidates, 'hard', 0.5)
+withMaze(walkNeighborsCandidates, 'very hard', 0.7)
+withMaze(walkNeighborsCandidates, 'impossible', 1)
+console.log('')
 
-function mediumMaze () {
-  const map = new Map()
-  addMapBorder(map)
-  // full map
-  addMaze(map, 0.3)
-
-  const path2 = findPath({ x: 20, y: 20 }, { x: 980, y: 980 }, map)
-
-  console.log('medium', JSON.stringify(path2))
-}
-
-mediumMaze()
-
-function hardMaze () {
-  const map = new Map()
-  addMapBorder(map)
-  // full map
-  addMaze(map, 0.5)
-
-  const path2 = findPath({ x: 20, y: 20 }, { x: 980, y: 980 }, map)
-
-  console.log('hard', JSON.stringify(path2))
-}
-
-hardMaze()
-
-function veryHardMaze () {
-  const map = new Map()
-  addMapBorder(map)
-  // full map
-  addMaze(map, 0.7)
-
-  const path2 = findPath({ x: 20, y: 20 }, { x: 980, y: 980 }, map)
-
-  console.log('very hard', JSON.stringify(path2))
-}
-
-veryHardMaze()
-
-function impossibleMaze () {
-  const map = new Map()
-  addMapBorder(map)
-  // full map
-  addMaze(map, 1)
-
-  const path2 = findPath({ x: 20, y: 20 }, { x: 980, y: 980 }, map)
-
-  console.log('impossible', JSON.stringify(path2))
-}
-
-impossibleMaze()
+console.log('tp :')
+emptyMap(tpNeighborsCandidates)
+withMaze(tpNeighborsCandidates, 'easy', 0.1)
+withMaze(tpNeighborsCandidates, 'medium', 0.3)
+withMaze(tpNeighborsCandidates, 'hard', 0.5)
+withMaze(tpNeighborsCandidates, 'very hard', 0.7)
+withMaze(tpNeighborsCandidates, 'very very hard', 0.9)
+withMaze(tpNeighborsCandidates, 'very very very hard', 0.95)
+withMaze(tpNeighborsCandidates, 'impossible', 1)
