@@ -10,15 +10,25 @@ function addMaze (map, proba) {
 }
 
 function addMapBorder (map) {
-  for (let x = 0; x <= 1000; x += 20) {
-    for (let y = 0; y <= 1000; y += 1000) {
-      map.setAtPosition({ x, y }, true)
-    }
+  for (let x = -60; x <= 1060; x += 20) {
+    map.setAtPosition({ x, y: -60 }, true)
+    map.setAtPosition({ x, y: -40 }, true)
+    map.setAtPosition({ x, y: -20 }, true)
+    map.setAtPosition({ x, y: 0 }, true)
+    map.setAtPosition({ x, y: 1000 }, true)
+    map.setAtPosition({ x, y: 1020 }, true)
+    map.setAtPosition({ x, y: 1040 }, true)
+    map.setAtPosition({ x, y: 1060 }, true)
   }
-  for (let x = 0; x <= 1000; x += 1000) {
-    for (let y = 0; y <= 1000; y += 20) {
-      map.setAtPosition({ x, y }, true)
-    }
+  for (let y = -60; y <= 1060; y += 20) {
+    map.setAtPosition({ y, x: -60 }, true)
+    map.setAtPosition({ y, x: -40 }, true)
+    map.setAtPosition({ y, x: -20 }, true)
+    map.setAtPosition({ y, x: 0 }, true)
+    map.setAtPosition({ y, x: 1000 }, true)
+    map.setAtPosition({ y, x: 1020 }, true)
+    map.setAtPosition({ y, x: 1040 }, true)
+    map.setAtPosition({ y, x: 1060 }, true)
   }
 }
 
