@@ -23,7 +23,7 @@ const { createBot } = require('pathofbot')
 
 async function start () {
   const bot = await createBot({
-    host: '198.98.54.85',
+    host: 'battlenetip',
     username: 'myusername',
     password: 'mypassword'
   })
