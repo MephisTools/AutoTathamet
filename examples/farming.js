@@ -1,16 +1,17 @@
 const { createBot } = require('../index')
 
-if (process.argv.length !== 6) {
-  console.log('Usage : node bot.js <username> <password> <character> <gameserver>')
+if (process.argv.length !== 7) {
+  console.log('Usage : node bot.js <username> <password> <character> <gameserver> <host>')
   process.exit(1)
 }
 
 const character = process.argv[4]
 const gameServer = process.argv[5]
+const host = process.argv[6]
 
 async function start () {
   const bot = await createBot({
-    host: '198.98.54.85',
+    host: host,
     username: process.argv[2],
     password: process.argv[3]
   })

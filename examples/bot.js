@@ -1,9 +1,7 @@
 const { createBot } = require('../index')
 
-if (process.argv.length !== 8) {
-  // Game servers list at https://pathofdiablo.com/p/
-  // 21 france, 4 london ...
-  console.log('Usage : node bot.js <username> <password> <character> <gamename> <gamepasswd> <gameserver>')
+if (process.argv.length !== 9) {
+  console.log('Usage : node bot.js <username> <password> <character> <gamename> <gamepasswd> <gameserver> <host>')
   process.exit(1)
 }
 
@@ -18,10 +16,11 @@ const character = process.argv[4]
 const gameName = process.argv[5] === 'rand' ? randomGame : process.argv[5]
 const gamePassword = process.argv[6] === 'none' ? '' : process.argv[6]
 const gameServer = process.argv[7]
+const host = process.argv[8]
 
 async function start () {
   const bot = await createBot({
-    host: '198.98.54.85',
+    host: host,
     username: process.argv[2],
     password: process.argv[3]
   })
