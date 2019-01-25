@@ -1,6 +1,6 @@
 # API
 
-## pathofbot.createBot(options)
+## autotathamet.createBot(options)
 
 Connect to diablo and returns a promise resolving to a `ClientDiablo` instance
 
@@ -10,7 +10,7 @@ Connect to diablo and returns a promise resolving to a `ClientDiablo` instance
  * host : sid host : diablo server host
  
 
-## pathofbot.Bot
+## autotathamet.Bot
 
 ### selectCharacter(character)
 

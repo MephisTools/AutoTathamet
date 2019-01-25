@@ -1,5 +1,5 @@
 {
-  "name": "pathofbot",
+  "name": "autotathamet",
   "version": "1.0.1",
   "description": "Create Diablo2 bots with a powerful, stable, and high level JavaScript API.",
   "main": "index.js",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/MephisTools/PathOfBot.git"
+    "url": "git+https://github.com/MephisTools/AutoTathamet.git"
   },
   "keywords": [
     "bot",
@@ -20,9 +20,9 @@
   "author": "Louis Beaumont",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/MephisTools/PathOfBot/issues"
+    "url": "https://github.com/MephisTools/AutoTathamet/issues"
   },
-  "homepage": "https://github.com/MephisTools/PathOfBot#readme",
+  "homepage": "https://github.com/MephisTools/AutoTathamet#readme",
   "dependencies": {
     "a-star": "^0.2.0",
     "diablo2-data": "^1.2.0",
