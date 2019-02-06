@@ -1,0 +1,20 @@
+{
+    "conditions": [
+        { "name": "ring", "quality": "unique", "properties": [
+             {"name": "itemmaxmanapercent", "value": "25", "operator": ">" }
+            ]
+        },
+        { "name": "flyingaxe", "quality": "unique", "ethereal": 0, "properties": [
+            {"name": "enhanceddamage", "value": "210", "operator": "=" }
+           ]
+        },
+        { "name": "fullrejuvenationpotion" },
+        { "name": "elrune" },
+        { "name": "ataghan", "quality": "rare", "ethereal": 0, "properties": [
+            {"name": "ias", "value": "40", "operator": "=" },
+            {"name": "enhanceddamage", "value": "290", "operator": ">" },
+            {"name": "sockets", "value": "2", "operator": "=" }
+           ]
+        }
+    ]
+}
