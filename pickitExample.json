@@ -9,12 +9,44 @@
            ]
         },
         { "name": "fullrejuvenationpotion" },
-        { "name": "elrune" },
         { "name": "ataghan", "quality": "rare", "ethereal": 0, "properties": [
             {"name": "ias", "value": "40", "operator": "=" },
             {"name": "enhanceddamage", "value": "290", "operator": ">" },
             {"name": "sockets", "value": "2", "operator": "=" }
            ]
-        }
+        },
+        { "type": "r01" },
+        { "type": "r02" },
+        { "type": "r03" },
+        { "type": "r04" },
+        { "type": "r05" },
+        { "type": "r06" },
+        { "type": "r07" },
+        { "type": "r08" },
+        { "type": "r09" },
+        { "type": "r10" },
+        { "type": "r11" },
+        { "type": "r12" },
+        { "type": "r13" },
+        { "type": "r14" },
+        { "type": "r15" },
+        { "type": "r16" },
+        { "type": "r17" },
+        { "type": "r18" },
+        { "type": "r19" },
+        { "type": "r20" },
+        { "type": "r21" },
+        { "type": "r22" },
+        { "type": "r23" },
+        { "type": "r24" },
+        { "type": "r25" },
+        { "type": "r26" },
+        { "type": "r27" },
+        { "type": "r28" },
+        { "type": "r29" },
+        { "type": "r30" },
+        { "type": "r31" },
+        { "type": "r32" },
+        { "type": "r33" }
     ]
 }

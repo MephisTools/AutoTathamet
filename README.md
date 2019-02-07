@@ -5,6 +5,8 @@
 
 Create Diablo2 bots with a powerful, stable, and high level JavaScript API.
 
+<img src="docs/images/follow_example.gif" width="300" height="300"><img src="docs/images/pickit_example.gif" width="300" height="300">
+
 ## Features
 
 * chat
