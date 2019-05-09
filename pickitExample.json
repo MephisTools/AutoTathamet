@@ -15,6 +15,11 @@
             {"name": "sockets", "value": "2", "operator": "=" }
            ]
         },
+        { "type": "hp1" },
+        { "type": "hp2" },
+        { "type": "hp3" },
+        { "type": "hp4" },
+        { "type": "hp5" },
         { "type": "r01" },
         { "type": "r02" },
         { "type": "r03" },

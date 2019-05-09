@@ -1,4 +1,5 @@
 const { createClientDiablo } = require('diablo2-protocol')
+const attack = require('./lib/plugins/attack')
 const chat = require('./lib/plugins/chat')
 const commands = require('./lib/plugins/commands')
 const exit = require('./lib/plugins/exit')
@@ -45,6 +46,7 @@ async function createBot (options) {
   const bot = new Bot()
 
   const p = bot.connect(options)
+  attack(bot, options)
   chat(bot, options)
   commands(bot, options)
   exit(bot, options)
