@@ -1,14 +1,12 @@
 const { createBot } = require('../index')
+const { randomString } = require('../lib/utils')
 
 if (process.argv.length !== 9) {
   console.log('Usage : node bot.js <username> <password> <character> <gamename> <gamepasswd> <gameserver> <host>')
   process.exit(1)
 }
 
-const possible = 'abcdefghijklmnopqrstuvwxyz'
-let randomGame = ''
-
-for (let i = 0; i < 5; i++) { randomGame += possible.charAt(Math.floor(Math.random() * possible.length)) }
+let randomGame = randomString(5)
 
 if (process.argv[5] === 'rand') { console.log('connecting to randomGame ' + randomGame) }
 

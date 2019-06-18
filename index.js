@@ -14,13 +14,12 @@ const websocketApi = require('./lib/plugins/websocketApi')
 const EventEmitter = require('events').EventEmitter
 
 class Bot extends EventEmitter {
-  constructor () {
+  constructor (options) {
     super()
-    this._client = null
+    this._client = createClientDiablo(options)
   }
 
-  async connect (options) {
-    this._client = createClientDiablo(options)
+  async connect () {
     await this._client.connect()
     this.username = this._client.username
     this._client.on('connect', () => {
@@ -43,9 +42,8 @@ class Bot extends EventEmitter {
 }
 
 async function createBot (options) {
-  const bot = new Bot()
+  const bot = new Bot(options)
 
-  const p = bot.connect(options)
   attack(bot, options)
   chat(bot, options)
   commands(bot, options)
@@ -59,7 +57,7 @@ async function createBot (options) {
   town(bot, options)
   websocketApi(bot, options)
 
-  await p
+  await bot.connect()
 
   return bot
 }
