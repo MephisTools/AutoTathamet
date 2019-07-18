@@ -25,9 +25,12 @@ const { createBot } = require('autotathamet')
 
 async function start () {
   const bot = await createBot({
-    host: 'battlenetip',
-    username: 'myusername',
-    password: 'mypassword'
+    host: 'battlenetIp',
+    username: 'myUser',
+    password: 'myPassword',
+    version: '1.14',
+    keyClassic: 'my16CharsKey',
+    keyExtension: 'my16CharsKey'
   })
   await bot.selectCharacter('mycharacter')
   await bot.createGame('mygame', '', 'game server', 0)

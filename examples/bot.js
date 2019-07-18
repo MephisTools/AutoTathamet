@@ -1,28 +1,34 @@
 const { createBot } = require('../index')
 
-if (process.argv.length !== 9) {
-  console.log('Usage : node bot.js <username> <password> <character> <gamename> <gamepasswd> <gameserver> <host>')
-  process.exit(1)
-}
+var ArgumentParser = require('argparse').ArgumentParser
+var parser = new ArgumentParser({
+  version: '1.4.1',
+  addHelp: true,
+  description: 'Simple bot'
+})
+parser.addArgument([ '-au', '--username' ], { required: true })
+parser.addArgument([ '-ap', '--password' ], { required: true })
+parser.addArgument([ '-c', '--character' ], { required: true })
+parser.addArgument([ '-gn', '--gameName' ], { required: true })
+parser.addArgument([ '-gp', '--gamePassword' ], { required: true })
+parser.addArgument([ '-gs', '--gameServer' ], { required: true })
+parser.addArgument([ '-s', '--sidServer' ], { required: true })
+parser.addArgument([ '-dv', '--diabloVersion' ], { defaultValue: '1.14' }) // How do we use version.js from diablo2-protocol ?
+parser.addArgument([ '-k1', '--keyClassic' ], { required: true })
+parser.addArgument([ '-k2', '--keyExtension' ], { required: true })
+parser.addArgument([ '-dp', '--delayPackets' ], { defaultValue: 500 }) // Only servers with anti hack system should use delay between packets
 
-const possible = 'abcdefghijklmnopqrstuvwxyz'
-let randomGame = ''
-
-for (let i = 0; i < 5; i++) { randomGame += possible.charAt(Math.floor(Math.random() * possible.length)) }
-
-if (process.argv[5] === 'rand') { console.log('connecting to randomGame ' + randomGame) }
-
-const character = process.argv[4]
-const gameName = process.argv[5] === 'rand' ? randomGame : process.argv[5]
-const gamePassword = process.argv[6] === 'none' ? '' : process.argv[6]
-const gameServer = process.argv[7]
-const host = process.argv[8]
+const { username, password, character, gameName, gamePassword, gameServer, sidServer, diabloVersion, keyClassic, keyExtension, delayPackets } = parser.parseArgs()
 
 async function start () {
   const bot = await createBot({
-    host: host,
-    username: process.argv[2],
-    password: process.argv[3]
+    host: sidServer,
+    username,
+    password,
+    version: diabloVersion,
+    keyClassic,
+    keyExtension,
+    delayPackets
   })
   await bot.selectCharacter(character)
   await bot.createGame(gameName, gamePassword, gameServer, 0)
