@@ -1,7 +1,8 @@
 # AutoTathamet
 [![NPM version](https://img.shields.io/npm/v/autotathamet.svg)](http://npmjs.com/package/autotathamet)
-[![Build Status](https://img.shields.io/circleci/project/MephisTools/AutoTathamet/master.svg)](https://circleci.com/gh/MephisTools/AutoTathamet) 
-[![Discord Chat](https://img.shields.io/badge/discord-here-blue.svg)](https://discord.gg/9RqtApv)  
+[![Build Status](https://img.shields.io/circleci/project/MephisTools/AutoTathamet/master.svg)](https://circleci.com/gh/MephisTools/AutoTathamet)
+[![Discord Chat](https://img.shields.io/badge/discord-here-blue.svg)](https://discord.gg/9RqtApv)
+[![Try it on gitpod](https://img.shields.io/badge/try-on%20gitpod-brightgreen.svg)](https://gitpod.io/#https://github.com/MephisTools/AutoTathamet)
 
 Create Diablo2 bots with a powerful, stable, and high level JavaScript API.
 
